@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter's Toolz | Software Hub</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #4ade80;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+        }
+
+        .card-header {
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-python { background-color: #1e3a8a; color: #93c5fd; }
+        .badge-flutter { background-color: #065f46; color: #6ee7b7; }
+        .badge-csharp { background-color: #581c87; color: #e9d5ff; }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: #0f172a;
+        }
+
+        .btn-secondary {
+            background-color: #334155;
+            color: var(--text-main);
+            border: 1px solid #475569;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Peter's Toolz</h1>
+        <p>A collection of open-source utilities, automation tools, and custom standalone desktop applications.</p>
+    </header>
+
+    <main class="container">
+        <div class="tools-grid">
+
+            <!-- CARD 1: EXCEL PRICE UPDATER -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-python">Python</span>
+                    <h2>Retail Inventory Price Updater</h2>
+                    <p>Automates bulk retail price matching across weekly monitor spreadsheets and master inventory catalogs using smart threshold logic and custom description parsing.</p>
+                </div>
+                <div class="card-actions">
+                    <!-- Magic Link: Always grabs the newest compiled .exe file from your public release -->
+                    <a href="https://github.com/petercsakany/inventory-price-updater/releases/latest/download/price_monitor_to_inventory.exe" class="btn btn-primary">Download .EXE</a>
+                    <a href="https://github.com/petercsakany/inventory-price-updater" class="btn btn-secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
+
+            <!-- CARD 2: PLACEHOLDER FOR PREVIOUS / FUTURE FLUTTER PROJECTS -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-flutter">Flutter</span>
+                    <h2>Cross-Platform Tool</h2>
+                    <p>Description of your previous or future application. This layout adapts beautifully when you compile desktop tools or dashboard utilities with Flutter.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary">Download App</a>
+                    <a href="#" class="btn btn-secondary" target="_blank">View Project</a>
+                </div>
+            </div>
+
+            <!-- CARD 3: PLACEHOLDER FOR PREVIOUS / C# UTILITIES -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-csharp">C#</span>
+                    <h2>Desktop Utility / Mod Tool</h2>
+                    <p>Showcase standalone programs, automated file layout processors, or modding frameworks you have built previously to keep all your binaries organized in one hub.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary">Download Binaries</a>
+                    <a href="#" class="btn btn-secondary" target="_blank">View Project</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peter's Toolz. Hosted entirely via GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
